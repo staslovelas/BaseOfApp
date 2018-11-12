@@ -8,12 +8,6 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/ToolbarStyle">
-
-        <include
-            layout="@layout/toolbar_search"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"/>
-
     </android.support.v7.widget.Toolbar>
 
 </LinearLayout>

@@ -10,9 +10,7 @@
     tools:openDrawer="start">
 
     <include
-        layout="@layout/toolbar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        layout="@layout/toolbar_main">
     </include>
 
     <android.support.design.widget.NavigationView

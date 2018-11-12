@@ -1,5 +1,7 @@
 package com.apps.marsellus.baseofapp;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.support.v7.widget.SearchView;
 import android.widget.Toast;
 
 public class Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,8 +26,6 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        EditText searchLine = toolbar.findViewById(R.id.search_line);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view_main);
         navigationView.setNavigationItemSelectedListener(this);
@@ -89,6 +90,27 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+
+        MenuItem searchBtn = menu.findItem(R.id.search_btn);
+        SearchView searchView = (SearchView) searchBtn.getActionView();
+
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        if(searchManager!=null){
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        }
+
+        searchView.setIconifiedByDefault(false);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return true;
     }
 
