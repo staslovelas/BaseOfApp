@@ -72,6 +72,8 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
             default:
                 break;
         }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
