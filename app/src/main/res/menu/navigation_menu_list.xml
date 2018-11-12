@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view_main">
+
+    <group android:checkableBehavior="none">
+
+        <item android:title="@string/item1"
+            android:icon="@drawable/ic_photo_library_black_24dp"
+            android:id="@+id/menu_item1"/>
+
+        <item android:title="@string/item2"
+            android:icon="@drawable/ic_video_library_black_24dp"
+            android:id="@+id/menu_item2"/>
+
+        <item android:title="@string/item3"
+            android:icon="@drawable/ic_collections_bookmark_black_24dp"
+            android:id="@+id/menu_item3"/>
+
+    </group>
+
+    <item android:title="@string/group_name1">
+        <menu>
+            <item android:title="@string/item4"
+                android:icon="@drawable/ic_note_black_24dp"
+                android:id="@+id/menu_item4"/>
+
+            <item android:title="@string/item5"
+                android:icon="@drawable/ic_date_range_black_24dp"
+                android:id="@+id/menu_item5"/>
+
+            <item android:title="@string/item6"
+                android:icon="@drawable/ic_favorite_black_24dp"
+                android:id="@+id/menu_item6"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/group_name2">
+        <menu>
+            <item android:title="@string/item7"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:id="@+id/menu_item7"/>
+
+            <item android:title="@string/item8"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:id="@+id/menu_item8"/>
+
+            <item android:title="@string/item9"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:id="@+id/menu_item9"/>
+        </menu>
+    </item>
+
+
+</menu>
