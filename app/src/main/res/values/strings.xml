@@ -41,6 +41,6 @@
     <string name="first_group_name">Common</string>
     <string name="second_group_name">Language</string>
 
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="section_format">Section: %1$d</string>
 
 </resources>
