@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Base Of App</string>
     
-    <!-- There is menu items strings -->
+    <!-- There are menu items strings -->
     <string name="item1">Photos</string>
     <string name="item2">Videos</string>
     <string name="item3">Articles</string>
@@ -16,16 +16,31 @@
     <string name="item8">Feedback</string>
     <string name="item9">Settings</string>
 
-    <!-- This is menu header strings -->
+    <!-- There are menu header strings -->
     <string name="username">User Android</string>
     <string name="usermail">android@gmail.com</string>
 
-    <!-- This is toolbar strings -->
+    <!-- There are toolbar strings -->
     <string name="search_btn_name">Search button</string>
-    <string name="serch_line">Search something...</string>
+    <string name="serch_line">Search something</string>
 
-    <!-- This is navigation drawer strings -->
+    <!-- There are navigation drawer strings -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- There are dialog windows strings -->
+    <string name="first_dialog_text">Version: 0.0.1\nDeveloper: some developer\nThis is app for something very important!</string>
+    <string name="second_dialog_text">Our contacts: contact.mail@mail.com\nFAQ: www.ourapps.ru\nRate our app on GooglePlay</string>
+
+    <!--There are settings window strings -->
+    <string name="setting1">Notifications</string>
+    <string name="setting2">Night mode</string>
+    <string name="setting3">Sound</string>
+    <string name="setting4">English</string>
+    <string name="setting5">Russian</string>
+    <string name="first_group_name">Common</string>
+    <string name="second_group_name">Language</string>
+
+    <string name="section_format">Hello World from section: %1$d</string>
 
 </resources>
