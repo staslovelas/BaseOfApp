@@ -3,6 +3,7 @@
     <!--This is navigation menu header dimens -->
     <dimen name="imview_indent">8dp</dimen>
     <dimen name="header_height">196dp</dimen>
+    <dimen name="header_padding">16dp</dimen>
 
     <!-- This is toolbar dimens -->
     <dimen name="search_layout_height">100dp</dimen>
