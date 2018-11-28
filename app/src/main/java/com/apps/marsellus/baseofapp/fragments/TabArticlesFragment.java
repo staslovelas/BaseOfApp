@@ -42,17 +42,17 @@ public class TabArticlesFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         articleObjectList = new ArrayList<>();
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
     }
 }

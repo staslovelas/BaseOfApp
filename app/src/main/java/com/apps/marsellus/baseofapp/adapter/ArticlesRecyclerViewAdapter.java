@@ -28,7 +28,7 @@ public class ArticlesRecyclerViewAdapter extends RecyclerView.Adapter<ArticlesRe
     @Override
     public ArtRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v;
-        v = LayoutInflater.from(appContext).inflate(R.layout.item_articles, viewGroup, false);
+        v = LayoutInflater.from(appContext).inflate(R.layout.item_article, viewGroup, false);
         ArtRecyclerViewHolder artRecyclerViewHolder = new ArtRecyclerViewHolder(v);
         return artRecyclerViewHolder;
     }
