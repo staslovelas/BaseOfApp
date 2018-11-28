@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.apps.marsellus.baseofapp.R;
-import com.apps.marsellus.baseofapp.adapter.RecyclerViewAdapter;
+import com.apps.marsellus.baseofapp.adapter.ArticlesRecyclerViewAdapter;
 import com.apps.marsellus.baseofapp.objects.ArticleObject;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.List;
 public class TabArticlesFragment extends Fragment {
 
     View v;
-    private RecyclerView rw;
+    private RecyclerView rv;
     private List<ArticleObject> articleObjectList;
 
     public TabArticlesFragment() {}
@@ -29,10 +29,11 @@ public class TabArticlesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.articles_fragment, container, false);
-        rw = (RecyclerView) v.findViewById(R.id.articles_list);
-        RecyclerViewAdapter rwa = new RecyclerViewAdapter(getContext(), articleObjectList);
-        rw.setLayoutManager(new LinearLayoutManager(getActivity()));
-        rw.setAdapter(rwa);
+        rv = (RecyclerView) v.findViewById(R.id.articles_list);
+        ArticlesRecyclerViewAdapter rwa = new ArticlesRecyclerViewAdapter(getContext(), articleObjectList);
+        rv.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rv.setAdapter(rwa);
+        rv.setHasFixedSize(true);
         return v;
     }
 
