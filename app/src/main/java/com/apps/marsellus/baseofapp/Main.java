@@ -55,8 +55,6 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         tabPagerAdapter.addFragment(new TabArticlesFragment(), "Articles");
 
         viewPager.setAdapter(tabPagerAdapter);
-        //viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        //tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
         tabLayout.setupWithViewPager(viewPager);
     }
 
