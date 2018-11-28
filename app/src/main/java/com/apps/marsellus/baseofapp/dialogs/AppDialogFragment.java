@@ -1,4 +1,4 @@
-package com.apps.marsellus.baseofapp;
+package com.apps.marsellus.baseofapp.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

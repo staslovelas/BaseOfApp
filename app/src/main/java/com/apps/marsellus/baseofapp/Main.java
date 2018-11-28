@@ -2,7 +2,6 @@ package com.apps.marsellus.baseofapp;
 
 import android.app.SearchManager;
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -18,6 +17,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.SearchView;
 import android.widget.Toast;
+
+import com.apps.marsellus.baseofapp.dialogs.AppDialogFragment;
+import com.apps.marsellus.baseofapp.adapter.TabPagerAdapter;
+import com.apps.marsellus.baseofapp.fragments.TabArticlesFragment;
+import com.apps.marsellus.baseofapp.fragments.TabPhotosFragment;
+import com.apps.marsellus.baseofapp.fragments.TabVideosFragment;
 
 public class Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -41,16 +46,18 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
         tabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager());
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        tabPagerAdapter.addFragment(new TabPhotosFragment(), "Photos");
+        tabPagerAdapter.addFragment(new TabVideosFragment(), "Videos");
+        tabPagerAdapter.addFragment(new TabArticlesFragment(), "Articles");
+
         viewPager.setAdapter(tabPagerAdapter);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
-
-        Log.d("Main", "onCreate done");
+        //viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        //tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
@@ -61,13 +68,13 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
 
         switch (id) {
             case R.id.menu_item1:
-                Toast.makeText(this, getString(R.string.item1), Toast.LENGTH_SHORT).show();
+                viewPager.setCurrentItem(0);
                 break;
             case R.id.menu_item2:
-                Toast.makeText(this, getString(R.string.item2), Toast.LENGTH_SHORT).show();
+                viewPager.setCurrentItem(1);
                 break;
             case R.id.menu_item3:
-                Toast.makeText(this, getString(R.string.item3), Toast.LENGTH_SHORT).show();
+                viewPager.setCurrentItem(2);
                 break;
             case R.id.menu_item4:
                 Toast.makeText(this, getString(R.string.item4), Toast.LENGTH_SHORT).show();
@@ -79,28 +86,23 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
                 Toast.makeText(this, getString(R.string.item6), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_item7:
-                Toast.makeText(this, getString(R.string.item7), Toast.LENGTH_SHORT).show();
                 bundle.putString("id", getString(R.string.item7));
                 bundle.putString("txt", getString(R.string.first_dialog_text));
                 dialog.setArguments(bundle);
                 dialog.show(getSupportFragmentManager(), "about_dialog");
                 break;
             case R.id.menu_item8:
-                Toast.makeText(this, getString(R.string.item8), Toast.LENGTH_SHORT).show();
                 bundle.putString("id", getString(R.string.item8));
                 bundle.putString("txt", getString(R.string.second_dialog_text));
                 dialog.setArguments(bundle);
                 dialog.show(getSupportFragmentManager(), "feedback_dialog");
                 break;
             case R.id.menu_item9:
-                Toast.makeText(this, getString(R.string.item9), Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(this, AppSettingsActivity.class);
-                startActivity(intent);
                 break;
             default:
                 break;
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
