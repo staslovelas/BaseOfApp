@@ -22,6 +22,7 @@ public class TabArticlesFragment extends Fragment {
     View v;
     private RecyclerView rv;
     private List<ArticleObject> articleObjectList;
+    private int art_num = 18;
 
     public TabArticlesFragment() {}
 
@@ -42,17 +43,8 @@ public class TabArticlesFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         articleObjectList = new ArrayList<>();
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        for(int i = 0; i<art_num; i++){
+            articleObjectList.add(new ArticleObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher_round));
+        }
     }
 }

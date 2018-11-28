@@ -22,6 +22,7 @@ public class TabVideosFragment extends Fragment {
     View v;
     private RecyclerView rv;
     private List<VideoObject> videoObjectList;
+    private int video_num = 18;
 
     public TabVideosFragment(){}
 
@@ -42,17 +43,8 @@ public class TabVideosFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         videoObjectList = new ArrayList<>();
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
-        videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.ic_launcher));
+        for (int i = 0; i < video_num; i++) {
+            videoObjectList.add(new VideoObject(getString(R.string.app_name), getString(R.string.first_dialog_text), R.mipmap.photo));
+        }
     }
 }
